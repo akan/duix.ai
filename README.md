@@ -1,9 +1,9 @@
 # duix.ai
-安卓和ios 2d数字人语音驱动
-duix-android: 安卓端demo
-GJLocalDigitalDemo: ios demo
+安卓和ios 2d数字人语音驱动  <br> 
+duix-android: android demo  <br> 
+GJLocalDigitalDemo: ios demo  <br> 
 
-内置的2个模特，模板和AI模型包可以通过公网地址下载
+内置的2个模特，模板和AI模型包可以通过公网地址下载。 <br> 
 
 <p align="center">
   <img src="res/明智.png"/> <br> https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009766199/mingzhi_540s.zip <br>
