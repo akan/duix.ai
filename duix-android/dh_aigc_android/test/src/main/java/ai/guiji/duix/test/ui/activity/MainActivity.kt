@@ -4,13 +4,9 @@ import ai.guiji.duix.sdk.client.BuildConfig
 import ai.guiji.duix.test.R
 import ai.guiji.duix.test.databinding.ActivityMainBinding
 import ai.guiji.duix.test.service.StorageService
-import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.Toast
 import java.io.BufferedReader
 import java.io.File
@@ -28,9 +24,10 @@ class MainActivity : BaseActivity() {
     private val baseConfigUUID = "d39caddd-488b-4682-b6d1-13549b135dd1"     // 可以用来控制模型文件版本
     private var baseConfigReady = false
 
-    // https://cdn.guiji.ai/duix/location/Valentin_540.zip
+    // https://cdn.guiji.ai/duix/digital/model/1706009711636/liangwei_540s.zip
+    // https://cdn.guiji.ai/duix/digital/model/1706009766199/mingzhi_540s.zip
     private val modelUrl =
-        "https://cdn.guiji.ai/duix/location/Valentin_540.zip"
+        "https://cdn.guiji.ai/duix/digital/model/1706009711636/liangwei_540s.zip"
     private lateinit var modelDir: File
     private val liangweiUUID = "d39caddd-488b-4682-b6d1-13549b135dd1"       // 可以用来控制模型文件版本
     private var modelReady = false

@@ -1,5 +1,14 @@
 ## 硅基本地版DUIX SDK使⽤⽂档 (1.0.3)
-    
+##两个人物模型
+```
+  https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706604220422/明智.png
+  https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009766199/mingzhi_540s.zip
+
+
+ https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706604171491/梁维.png
+ https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009711636/liangwei_540s.zip
+       
+```
 ### 开发环境
 开发⼯具: Xcode  ios12.0以上 iphoneX及以上
 
