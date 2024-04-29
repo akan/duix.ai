@@ -1,0 +1,57 @@
+#/****************************************************************************
+#*   Cartoonifier, for Android.
+#*****************************************************************************
+#*   by Shervin Emami, 5th Dec 2012 (shervin.emami@gmail.com)
+#*   http://www.shervinemami.info/
+#*****************************************************************************
+#*   Ch1 of the book "Mastering OpenCV with Practical Computer Vision Projects"
+#*   Copyright Packt Publishing 2012.
+#*   http://www.packtpub.com/cool-projects-with-opencv/book
+#****************************************************************************/
+
+
+LOCAL_PATH := $(call my-dir)
+
+
+include $(CLEAR_VARS)
+
+
+
+LOCAL_SRC_FILES  += \
+    EglRenderer.cpp \
+    Log.cpp XTick.c \
+    RgbVideoRenderer.cpp \
+    SurfaceVideoRenderer.cpp \
+    FrameSource.cpp \
+    MediaData.cpp \
+    MessageSource.cpp \
+    RenderHelper.cpp \
+    AudioTrack.cpp \
+    AudioRenderer.cpp \
+    MessageHelper.cpp \
+    GlesProgram.cpp \
+    LoopThread.cpp \
+    XThread.cpp \
+    LoopThreadHelper.cpp \
+    GRender.cpp \
+    ../src/jmat.cpp \
+
+
+LOCAL_ARM_NEON := true
+LOCAL_MODULE := facedetect
+LOCAL_LDLIBS +=  -llog -ldl -lm -lmediandk -lEGL -lGLESv2 -lmediandk -landroid
+LOCAL_LDLIBS += -ljnigraphics -fopenmp
+LOCAL_CFLAGS += -fpermissive
+LOCAL_CPPFLAGS += -fpermissive
+#LOCAL_CFLAGS += -ftree-vectorizer-verbose=2
+LOCAL_CPPFLAGS += -std=c++17 -DUSE_OPENCV -DUSE_NCNN
+LOCAL_LDLIBS += -lstdc++
+
+LOCAL_C_INCLUDES += $(LOCAL_PATH)
+LOCAL_C_INCLUDES += include
+LOCAL_C_INCLUDES += ../include
+LOCAL_C_INCLUDES += ../third/arm/include
+LOCAL_C_INCLUDES += ../opencv-mobile-4.6.0-android/sdk/native/jni/include/opencv4
+LOCAL_C_INCLUDES += ../ncnn-20221128-android-vulkan-shared/arm64-v8a/include/ncnn
+
+include $(BUILD_SHARED_LIBRARY)

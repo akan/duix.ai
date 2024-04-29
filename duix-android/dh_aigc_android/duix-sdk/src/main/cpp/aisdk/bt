@@ -1,0 +1,19 @@
+g++ -g -I. \
+	-I/usr/include/opencv4 \
+	-I../third/x86/include \
+	-I../third/x86/include/ncnn/  \
+	-I../third/x86/include/onnx/ \
+    -I../third/x86/include/turbojpeg/ \
+    	wavcache.cpp \
+	jmat.cpp \
+    	wavreader.cpp \
+	wenet.cpp \
+	aimodel.cpp  \
+    	scrfd.cpp \
+    	pfpld.cpp \
+    	munet.cpp \
+    	blendgram.cpp \
+	face_utils.cpp \
+	-L../third/x86/lib	\
+		-lopencv_core -lopencv_dnn -lopencv_imgcodecs -lopencv_imgproc -lopencv_highgui -lopencv_videoio \
+		-lonnxruntime -lncnn \

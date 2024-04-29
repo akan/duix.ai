@@ -1,0 +1,86 @@
+#/****************************************************************************
+#*   Cartoonifier, for Android.
+#*****************************************************************************
+#*   by Shervin Emami, 5th Dec 2012 (shervin.emami@gmail.com)
+#*   http://www.shervinemami.info/
+#*****************************************************************************
+#*   Ch1 of the book "Mastering OpenCV with Practical Computer Vision Projects"
+#*   Copyright Packt Publishing 2012.
+#*   http://www.packtpub.com/cool-projects-with-opencv/book
+#****************************************************************************/
+
+
+LOCAL_PATH := $(call my-dir)
+
+
+include $(CLEAR_VARS)
+
+
+
+LOCAL_SRC_FILES  +=  \
+    base/coffeecatch.c \
+    android/DigitJni.cpp \
+    android/MsgcbJni.cpp \
+    android/JniHelper.cpp \
+    aisdk/jmat.cpp \
+    android/kmatarm.cpp \
+    aisdk/wavreader.cpp \
+    aisdk/wenet.cpp \
+    aisdk/aimodel.cpp \
+    aisdk/scrfd.cpp \
+    aisdk/pfpld.cpp \
+    aisdk/munet.cpp \
+    aisdk/blendgram.cpp \
+    aisdk/face_utils.cpp \
+    digit/netwav.cpp \
+    digit/looper.cpp \
+    digit/netcurl.cpp \
+    digit/GRender.cpp \
+    digit/GDigit.cpp \
+    digit/dispatchqueue.cpp \
+    render/EglRenderer.cpp \
+    render/RgbVideoRenderer.cpp \
+    render/SurfaceVideoRenderer.cpp \
+    render/RenderHelper.cpp \
+    render/AudioTrack.cpp \
+    render/AudioRenderer.cpp \
+    render/GlesProgram.cpp \
+    base/Log.cpp \
+    base/FrameSource.cpp \
+    base/MediaData.cpp \
+    base/MessageSource.cpp \
+    base/MessageHelper.cpp \
+    base/LoopThread.cpp \
+    base/XThread.cpp \
+    base/XTick.c \
+    base/cJSON.c \
+    base/dh_mem.c \
+    digit/grtcfg.c \
+    base/LoopThreadHelper.cpp \
+    )
+
+LOCAL_ARM_NEON := true
+LOCAL_MODULE := facedetect
+LOCAL_LDLIBS +=  -llog -ldl -lm -lmediandk
+LOCAL_LDLIBS += -lEGL -lGLESv2 -landroid
+LOCAL_LDLIBS += -ljnigraphics -fopenmp
+
+LOCAL_CFLAGS += -fpermissive
+LOCAL_CPPFLAGS += -fpermissive
+#LOCAL_CFLAGS += -ftree-vectorizer-verbose=2
+LOCAL_CPPFLAGS += -std=c++17
+LOCAL_LDLIBS += -lstdc++
+
+LOCAL_C_INCLUDES += $(LOCAL_PATH)
+LOCAL_C_INCLUDES += include
+LOCAL_C_INCLUDES += base
+LOCAL_C_INCLUDES += aisdk
+LOCAL_C_INCLUDES += digit
+LOCAL_C_INCLUDES += render
+LOCAL_C_INCLUDES += android
+LOCAL_C_INCLUDES += third/arm/include
+LOCAL_C_INCLUDES += third/arm/include/ncnn
+LOCAL_C_INCLUDES += third/opencv-mobile-4.6.0-android/sdk/native/jni/include/
+LOCAL_C_INCLUDES += third/ncnn-20221128-android-vulkan-shared/arm64-v8a/include/ncnn
+
+include $(BUILD_SHARED_LIBRARY)

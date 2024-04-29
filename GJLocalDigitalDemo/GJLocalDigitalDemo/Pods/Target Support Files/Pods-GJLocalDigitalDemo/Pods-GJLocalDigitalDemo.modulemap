@@ -1,0 +1,6 @@
+framework module Pods_GJLocalDigitalDemo {
+  umbrella header "Pods-GJLocalDigitalDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

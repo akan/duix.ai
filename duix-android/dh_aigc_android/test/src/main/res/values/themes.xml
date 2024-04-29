@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.DUIX.Test" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="colorPrimary">#fff</item>
+        <item name="colorPrimaryDark">#4349a9</item>
+        <item name="colorAccent">#4349a9</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

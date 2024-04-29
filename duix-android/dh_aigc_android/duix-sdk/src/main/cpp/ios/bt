@@ -1,0 +1,31 @@
+g++ -g -I. \
+        -I/usr/include/opencv4 \
+        -I../third/x86/include \
+        -I../third/x86/include/ncnn/  \
+        -I../third/x86/include/onnx/ \
+        -I../third/x86/include/turbojpeg \
+        -I../aisdk \
+        -I../aes \
+        ../aisdk/jmat.cpp \
+        ../aisdk/wavreader.cpp \
+        ../aisdk/wenet.cpp \
+        ../aisdk/aimodel.cpp  \
+        ../aisdk/scrfd.cpp \
+        ../aisdk/pfpld.cpp \
+        ../aisdk/munet.cpp \
+        ../aisdk/blendgram.cpp \
+        ../aisdk/face_utils.cpp \
+        ../aisdk/malpha.cpp \
+        ../aisdk/wavcache.cpp \
+		../aes/aesmain.c \
+		../aes/aes_cbc.c \
+        ../aes/aes_core.c \
+        ../aes/aes_ecb.c \
+        ../aes/cbc128.c \
+        ../aes/base64.c \
+        ../aes/gj_aes.c \
+        gjdigit.cpp \
+        iostest.cpp \
+        -L../third/x86/lib	\
+        -lopencv_core -lopencv_dnn -lopencv_imgcodecs -lopencv_imgproc -lopencv_highgui -lopencv_videoio \
+        -lonnxruntime -lncnn -ljpeg -lturbojpeg \

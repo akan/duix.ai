@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'ai.guiji.duix.sdk.client'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        versionCode 4
+        versionName '3.0.3'
+
+        externalNativeBuild {
+            cmake {
+                abiFilters 'arm64-v8a', "armeabi-v7a"
+                cppFlags "-std=c++17", "-fexceptions"
+                //arguments "-DANDROID_STL=c++_shared","-DANDROID_TOOLCHAIN=clang"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField("String", "VERSION_NAME", "\"${defaultConfig.versionName}\"")
+            buildConfigField('int', 'VERSION_CODE', "${defaultConfig.versionCode}")
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField("String", "VERSION_NAME", "\"${defaultConfig.versionName}\"")
+            buildConfigField('int', 'VERSION_CODE', "${defaultConfig.versionCode}")
+
+            android.libraryVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "duix_client_sdk_${buildType.name}_${defaultConfig.versionName}.aar"
+                }
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//    kotlinOptions {
+//        jvmTarget = '1.8'
+//    }
+}
+
+dependencies {
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.14.2'
+    implementation "org.java-websocket:Java-WebSocket:1.5.1"
+    implementation 'com.squareup.okhttp3:okhttp-sse:4.10.0'
+}

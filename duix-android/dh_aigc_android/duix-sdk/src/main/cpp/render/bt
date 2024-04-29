@@ -1,0 +1,22 @@
+g++ -g -std=c++17 \
+    linuxtest.cpp \
+    EglRenderer.cpp \
+    Log.cpp XTick.c \
+    RgbVideoRenderer.cpp \
+    SurfaceVideoRenderer.cpp \
+    FrameSource.cpp \
+    MediaData.cpp \
+    MessageSource.cpp \
+    RenderHelper.cpp \
+    AudioTrack.cpp \
+    AudioRenderer.cpp \
+    MessageHelper.cpp \
+    GlesProgram.cpp \
+    LoopThread.cpp \
+    XThread.cpp \
+    LoopThreadHelper.cpp \
+    GRender.cpp \
+    ../src/jmat.cpp \
+    -Iinclude -I../include -lEGL -lOpenGL -lGLESv2 -lX11 \
+    -I/usr/include/opencv4 -lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lopencv_highgui \
+    -DUSE_OPENCV

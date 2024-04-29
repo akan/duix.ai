@@ -1,0 +1,25 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build/
+*/build/
+*/*/build/
+*/debug/
+*/release/
+/captures
+.externalNativeBuild
+.cxx
+*.bat
+*.apk
+output-metadata.json
+# app用到zip的请忽略
+# 自定义了local.properties的请删除这条
+local.properties
+~$*
+gradlew
+.idea
+# 自定义了根目录gradle/gradle-wrapper.properties的请删除这条（不推荐自定义）
+#gradle
+build

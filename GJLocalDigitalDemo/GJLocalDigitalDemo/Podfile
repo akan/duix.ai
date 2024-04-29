@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+post_install do |installer|
+  installer.generated_projects.each do |project|
+    project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+         end
+    end
+  end
+  project_path = "GJLocalDigitalDemo.xcodeproj"
+  project = Xcodeproj::Project.open(project_path)
+  project.targets.each do |target|
+    shell_script_path = "Pods/Target Support Files/Pods-GJLocalDigitalDemo/Pods-"+target.name+"-frameworks.sh"
+    shell_script_input_lines = File.readlines(shell_script_path)
+    shell_script_output_lines = shell_script_input_lines.map { |line| line.sub("source=\"$(readlink \"${source}\")\"", "source=\"$(readlink -f \"${source}\")\"") }
+    File.open(shell_script_path, 'w') do |f|
+      shell_script_output_lines.each do |line|
+        f.write line
+      end
+    end
+  end
+end
+target 'GJLocalDigitalDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'AFNetworking'
+  pod 'SSZipArchive'
+  # Pods for GJLocalDigitalDemo
+  
+end

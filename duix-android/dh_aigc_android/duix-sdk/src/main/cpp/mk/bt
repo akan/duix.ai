@@ -1,0 +1,58 @@
+g++ -g  \
+    -Iinclude -Ibase -Irender -Idigit -Iaisdk \
+    -I/usr/include/opencv4/ \
+		   -Ithird/x86/include/ \
+		   -Ithird/x86/include/ncnn/  \
+		   -Ithird/x86/include/onnx/ \
+		   -Ithird/x86/include/turbojpeg/ \
+    aisdk/jmat.cpp \
+    src/kmatx86.cpp \
+    aisdk/wavreader.cpp \
+    aisdk/wenet.cpp \
+    aisdk/aimodel.cpp \
+    aisdk/scrfd.cpp \
+    aisdk/pfpld.cpp \
+    aisdk/munet.cpp \
+    aisdk/malpha.cpp \
+    aisdk/wavcache.cpp \
+    aisdk/blendgram.cpp \
+    aisdk/face_utils.cpp \
+    digit/netwav.cpp \
+    digit/looper.cpp \
+    digit/netcurl.cpp \
+    digit/GRender.cpp \
+    digit/GDigit.cpp \
+    digit/dispatchqueue.cpp \
+    base/BaseRenderHelper.cpp \
+    base/AudioTrack.cpp \
+    render/EglRenderer.cpp \
+    render/RgbVideoRenderer.cpp \
+    render/SurfaceVideoRenderer.cpp \
+    render/RenderHelper.cpp \
+    render/AudioRenderer.cpp \
+    render/GlesProgram.cpp \
+    base/Log.cpp \
+    base/FrameSource.cpp \
+    base/MediaData.cpp \
+    base/MessageSource.cpp \
+    base/MessageHelper.cpp \
+    base/LoopThread.cpp \
+    base/XThread.cpp \
+    base/XTick.c \
+    base/cJSON.c \
+    base/dh_mem.c \
+    digit/grtcfg.c \
+    base/LoopThreadHelper.cpp \
+    linux/ssat.cpp \
+    lib/libpplcv_static.a \
+    lib/libpplcommon_static.a \
+    -fpermissive   -Wwrite-strings \
+        -Llib \
+        -L/usr/lib/x86_64-linux-gnu/ \
+        -Lthird/ncnn-20221128-android-vulkan-shared/x86_64/lib/ \
+	   -Lthird/x86/lib	\
+       -ljpeg -lturbojpeg \
+		-lopencv_core -lopencv_dnn -lopencv_imgcodecs -lopencv_imgproc -lopencv_highgui -lopencv_videoio \
+		-lonnxruntime -lncnn -lcurl \
+        -lEGL -lOpenGL -lGLESv2 -lX11 \
+        -fopenmp

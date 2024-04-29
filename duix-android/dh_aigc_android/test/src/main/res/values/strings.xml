@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">数字人Demo</string>
+    <string name="play">播放</string>
+    <string name="download">下载</string>
+    <string name="ready">就绪</string>
+
+    <string name="base_app_id_title">appID:</string>
+    <string name="base_app_key_title">appKey:</string>
+    <string name="base_conversation_title">conversationID:</string>
+    <string name="asr_endpoint">ASR endpoint:</string>
+    <string name="background">背景图:</string>
+    <string name="base_config_title">基础配置文件(所有的模型驱动都需要该配置):</string>
+    <string name="model_download_title">预览的模型文件:</string>
+    <string name="need_record_permission">需要授予语音权限以继续操作</string>
+    <string name="you_say">请说,我在听</string>
+
+
+    <string-array name="bg_name">
+        <item>bg1.png</item>
+        <item>bg2.jpg</item>
+    </string-array>
+</resources>

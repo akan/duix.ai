@@ -1,0 +1,2 @@
+include ':duix-sdk'
+include ':test'
