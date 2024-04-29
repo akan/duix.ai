@@ -12,7 +12,7 @@ GJLocalDigitalDemo: ios demo
 
 
 ### 使用说明 
-android参考 duix-android/README.md
+android参考 duix-android/README.md 
 ios参考 GJLocalDigitalDemo/GJLocalDigitalDemo/GJLocalDigitalSDK.md
 
 ### 如果有定制需求或技术支持，请在讨论区留言
