@@ -6,7 +6,7 @@ GJLocalDigitalDemo: ios demo  <br>
 内置的2个模特，模板和AI模型包可以通过公网地址下载。 <br> 
 
 <p align="center">
-  <img src="res/明智.png" width=00/>
+  <img src="res/明智.png" width=200/>
   <img src="res/梁维.png" width=200/>
 </p>
 
