@@ -16,3 +16,6 @@ android参考 duix-android/README.md <br>
 ios参考 GJLocalDigitalDemo/GJLocalDigitalDemo/GJLocalDigitalSDK.md
 
 ### 如果有定制需求或技术支持，请在讨论区留言
+
+### Acknowledgements
+-音频特征我们借鉴了 [wenet](https://github.com/wenet-e2e/wenet)
