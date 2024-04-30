@@ -1,13 +1,8 @@
 ## 硅基本地版DUIX SDK使⽤⽂档 (1.0.3)
-##两个人物模型
+##两个人物模型（切换男女形象，修改./GJLocalDigitalDemo/GJLocalDigitalDemo/GJLocalDigitalDemo/ViewController.mm的DIGITALMODELURL变量即可）
 ```
-  https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1712043476592/知心姐姐.png
-  https://cdn.guiji.ai/duix/digital/model/1712034391673/bendi1_0329.zip
-
-
- https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706604171491/梁维.png
- https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009711636/liangwei_540s.zip
-       
+  女：https://cdn.guiji.ai/duix/digital/model/1712034391673/bendi1_0329.zip
+  男：https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009711636/liangwei_540s.zip 
 ```
 ### 开发环境
 开发⼯具: Xcode  ios12.0以上 iphoneX及以上
@@ -63,9 +58,6 @@
 ```
 
 ## 方法
-
-
-```
 
 ### 初始化
 

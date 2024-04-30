@@ -31,6 +31,12 @@
 | 开发 IDE | Android Studio Giraffe \mid 2022.3.1 Patch 2                     |
 | 内存要求   | 可用于数字人的内存 >= 400MB                                               |
 
+##两个人物模型（切换男女形象，修改./duix-android/dh_aigc_android/test/src/main/java/ai/guiji/duix/test/ui/activity/MainActivity.kt的modelUrl变量即可）
+```
+  女：https://cdn.guiji.ai/duix/digital/model/1712034391673/bendi1_0329.zip
+  男：https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009711636/liangwei_540s.zip 
+```
+
 ### 2. SDK集成
 
 引入 sdk aar 包: duix_client_sdk_release_${version}.aar
@@ -260,10 +266,3 @@ duix?.motion()
 
 
 ## 六、版本记录
-
-
-**<a>3.0.3</a>**
-
-```awo l 
-1. 优化本地渲染。
-```
