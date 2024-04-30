@@ -1,8 +1,8 @@
 ## 硅基本地版DUIX SDK使⽤⽂档 (1.0.3)
 ##两个人物模型
 ```
-  https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706604220422/明智.png
-  https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009766199/mingzhi_540s.zip
+  https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1712043476592/知心姐姐.png
+  https://cdn.guiji.ai/duix/digital/model/1712034391673/bendi1_0329.zip
 
 
  https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706604171491/梁维.png

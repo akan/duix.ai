@@ -6,11 +6,11 @@ GJLocalDigitalDemo: ios demo  <br>
 内置的2个模特，模板和AI模型包可以通过公网地址下载。 <br> 
 
 <p align="center">
-  <img src="res/明智.png" width=200/>
-  <img src="res/梁维.png" width=200/>
+  <img src="res/女.png" width=200/>
+  <img src="res/男.png" width=200/>
 </p>
 
-[女 链接地址](https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009766199/mingzhi_540s.zip)
+[女 链接地址](https://cdn.guiji.ai/duix/digital/model/1712034391673/bendi1_0329.zip)
 [男 链接地址](https://digital-public.obs.cn-east-3.myhuaweicloud.com/duix/digital/model/1706009711636/liangwei_540s.zip)
 
 ### 使用说明 
