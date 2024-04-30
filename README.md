@@ -5,7 +5,7 @@
 - 支持二次开发，丰富的sdk接口，用户可根据sdk文档开发自己专属需求。
 - 完全开源，底层推理及上层商业化应用逻辑整套流程源码开放。
 
-###目录结构 
+### 目录结构   
 ```
 duix-android: android demo       
 GJLocalDigitalDemo: ios demo  
